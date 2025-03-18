@@ -46,11 +46,11 @@ const ProgressComponents = () => {
 
     return (
         <article id="progress" ref={refContainer} className="fixed right-10 top-10 w-1 h-60 flex justify-start items-center flex-col gap-8 z-[111] text-uppercase">
-            <p className="text-[#28bedf40] text-sm transform">Start</p>
+            <p className="text-[#28bedf40] text-sm transform cursor-pointer">Start</p>
             <div className="relative w-4 h-[50%] bg-[#28bedf40] flex items-start rounded-full">
                 <div ref={refProgressBar} className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-[#ff6347] w-4 h-[1%] rounded-full"></div>
             </div>
-            <p className="text-[#0b0ea940] text-sm transform">End</p>
+            <p className="text-[#0b0ea940] text-sm transform cursor-pointer">End</p>
         </article>
     );
 };
