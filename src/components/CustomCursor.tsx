@@ -29,7 +29,6 @@ const CustomCursor = ({}: CustomCursorProps) => {
 
   const rotate = (distance: { x: number; y: number }) => {
     const angle = Math.atan2(distance.y, distance.x);
-    console.log(angle);
     setRotateValue(angle);
     // 로직수정예정: animate(cursorRef.current, { rotate: `${angle}rad` }, { duration: 0 });
   };
