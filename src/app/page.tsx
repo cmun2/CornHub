@@ -1,8 +1,15 @@
 "use client";
-import { useRef } from "react"
+import { Fragment, useRef } from "react"
 import Image from "next/image";
 import ScrollProgress from "@/components/ScrollProgress";
 import CustomCursor from "@/components/CustomCursor"
+import IntroSection from "@/components/sections/IntroSection";
+import CareerSection from "@/components/sections/CareerSection";
+import KeyWordSection from "@/components/sections/KeywordSection";
+import ProjectSection from "@/components/sections/ProjectSection";
+import StudySection from "@/components/sections/StudySection";
+import Footer from "@/components/sections/Footer";
+
 
 // interface CustomCursorProps {
 //   stickyElement: React.RefObject<HTMLElement | null>;
@@ -11,7 +18,7 @@ import CustomCursor from "@/components/CustomCursor"
 export default function Home() {
   // const stickyElement = useRef<HTMLHeadingElement | null>(null);
   return (
-    <>
+    <Fragment>
       <CustomCursor />
       <ScrollProgress />
       <main className="flex min-h-screen flex-col justify-between bg-white cursor-none">
@@ -24,32 +31,16 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <section className="flex flex-col items-center w-full h-dvh border border-blue-300 mt-4 bg-blue-300">
-          <h1 className="text-2xl font-extrabold cursor-pointer">Introduction</h1>
-        </section>
+        <IntroSection />
         <button>Button</button>
-        <section className="flex flex-col items-center w-full h-dvh border border-blue-300 mt-4 bg-blue-300">
-          <h1 className="text-2xl font-extrabold">Career</h1>
-        </section>
+        <CareerSection />
 
         {/* Keyword Horizontal Scroll */}
-        <section className="flex flex-col items-center w-full h-dvh border border-blue-300 mt-4 bg-blue-300">
-          <h1 className="text-2xl font-extrabold">My Keyword</h1>
-          <ul>
-            <li>Developer</li>
-            <li>Responsibility</li>
-            <li>Execution Power</li>
-            <li>Cooperation</li>
-            <li>Language</li>
-          </ul>
-        </section>
-        <section className="flex flex-col items-center w-full h-dvh border border-blue-300 mt-4 bg-blue-300">
-          <h1 className="text-2xl font-extrabold">Study</h1>
-        </section>
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center mt-4">
-          <h2 className="text-2xl font-extrabold">Contact</h2>
-        </footer>
+        <KeyWordSection />
+        <ProjectSection />
+        <StudySection />
+        <Footer />
       </main>
-      </>
+      </Fragment>
   );
 }
